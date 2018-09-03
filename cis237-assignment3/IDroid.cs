@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Author: David Barnes
+// Class: CIS 237
+// Assignment: 3
+using System;
 
 namespace cis237_assignment3
 {
