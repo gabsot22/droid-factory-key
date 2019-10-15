@@ -58,11 +58,15 @@ namespace cis237_assignment3
             this.totalCost = this.baseCost + MODEL_COST + this.CalculateCostOfOptions() + this.CalculateCostOfShips();
         }
 
+        protected override string GetModelName()
+        {
+            return "Astromech";
+        }
+
         // Overriden ToString method to output the information for this droid. Uses work done in the base class
         public override string ToString()
         {
             return
-                "Model: Astromech" + Environment.NewLine +
                 base.ToString() +
                 "Has Fire Extinguisher: " + this.hasFireExtinguisher + Environment.NewLine +
                 "Number Of Ships: " + this.numberOfShips + Environment.NewLine;

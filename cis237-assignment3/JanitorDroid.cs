@@ -46,11 +46,15 @@ namespace cis237_assignment3
             return optionsCost;
         }
 
+        protected override string GetModelName()
+        {
+            return "Janitor";
+        }
+
         // Overridden ToString that uses the base ToString method, and appends the missing information.
         public override string ToString()
         {
             return
-                "Model: Janitor" + Environment.NewLine +
                 base.ToString() +
                 "Has Trash Compactor: " + this.hasTrashCompactor + Environment.NewLine +
                 "Has Vacuum: " + this.hasVacuum + Environment.NewLine;

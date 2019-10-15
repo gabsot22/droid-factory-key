@@ -63,12 +63,17 @@ namespace cis237_assignment3
             this.totalCost = this.baseCost + MODEL_COST + this.CalculateCostOfOptions();
         }
 
+        protected virtual string GetModelName()
+        {
+            return "Utility";
+        }
+
         // Overridden ToString method to output the information for this droid.
         // uses the base ToString method and appends more information to it.
         public override string ToString()
         {
             return
-                "Model: Utility" + Environment.NewLine +
+                "Model: " + GetModelName() + Environment.NewLine +
                 base.ToString() +
                 "Has Tool Box: " + this.hasToolbox + Environment.NewLine +
                 "Has Computer Connection: " + this.hasComputerConnection + Environment.NewLine +
